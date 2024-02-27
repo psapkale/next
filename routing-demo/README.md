@@ -9,3 +9,4 @@
 
 -  Folder name defines inside `[]` are treated as dynamic routes
 -  Every page in the app router receives route parameter as a props
+-  It is possible to create nested dynamic routes by having dynamic segments in the folder name
