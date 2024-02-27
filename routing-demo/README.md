@@ -10,3 +10,11 @@
 -  Folder name defines inside `[]` are treated as dynamic routes
 -  Every page in the app router receives route parameter as a props
 -  It is possible to create nested dynamic routes by having dynamic segments in the folder name
+
+## Catch all
+
+-  `[...slugs]` -> `...` is javascript spread operator and `slugs` is common convention when refering urls
+-  `docs > [...slugs] > page.tsx` will match any url that contains `docs` segment in the path
+-  Catch all segments routes captures all url segments and match them to single file (here `page.tsx` inside `docs > [...slugs]`) in the project
+-  Going on `/docs` gives page not found, for this Next.js provides optional catch all route as well
+-  To do so just warp `[...slugs]` in another pair of `[]`
