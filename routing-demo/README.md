@@ -18,3 +18,8 @@
 -  Catch all segments routes captures all url segments and match them to single file (here `page.tsx` inside `docs > [...slugs]`) in the project
 -  Going on `/docs` gives page not found, for this Next.js provides optional catch all route as well
 -  To do so just warp `[...slugs]` in another pair of `[]`
+
+## Custom Not Found page
+
+-  To handle 404 pages create a `not-found.[tsx/jsx]` file inside the `src/app`
+-  Not found pages can also be defined at the folder level
