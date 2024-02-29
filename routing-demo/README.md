@@ -30,3 +30,9 @@
 -  The route isn't publically accessible until a `page.tsx` file is added to the respected route segment
 -  Moreover even when a route become publically accessible only the content returned by `page.tsx` is sent to the client
 -  The content return must be a default exported React component
+
+## Private Folders
+
+-  A private folder is not considered by the routing system
+-  Prefix the folder name with an '\_'
+-  If you want to include an underscore in URL segments, you can prefix the folder name with '%5F', which is the URL-encoded form of an underscore
