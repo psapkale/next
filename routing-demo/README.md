@@ -54,3 +54,17 @@
 
 -  To organize your project in a manner that doesn't affect the URL (route groups)
 -  To selectively apply a layout to certain segments while leaving others unchanged
+
+## Routing Metadata
+
+-  Ensuring proper search engine optimization (SEO) is crusial for increasing visibility and attracting users
+-  Next.js introduced the `Metadata API` which allows you to define metadata for each page
+-  Metadata ensures accurate and relavent information is displayed when your pages are shared or indexed
+-  Configuring Metadata
+   -  Export a static metadata object
+   -  Export a dynamic generateMetadata function
+-  Metadata rules
+   -  Both `layout.tsx` and `page.tsx` file can `export metadata`. If defined in a layout, it applies to all pages in that layout, but if defined in a page, it applies only to that page
+   -  Metadata is read in order, from the root level down to the final page level
+   -  When there's metadata in multiple places for the same route, they get combined, but page metadata will replace layout metadata if they have the same properties
+   -  When multiple segments in a route exports metadata object, the properties are merged to form the final metadata object and during merging, the deepest segment takes priority
