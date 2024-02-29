@@ -49,3 +49,8 @@
 -  Next.js automatically generates this file even if you delete it
 
 ## Nested Layouts
+
+## Route Group Layout
+
+-  To organize your project in a manner that doesn't affect the URL (route groups)
+-  To selectively apply a layout to certain segments while leaving others unchanged
