@@ -41,3 +41,9 @@
 
 -  Allow us to logically group our routes and project files without affecting the URL path structure
 -  To mark a folder as Route Group simply wrap it inside parenthesis `()`
+
+## Layouts
+
+-  You can define a layout by default exporting a React component from a `layout.tsx` file
+-  That component should accept a children prop that will be populated with a child page during rendering
+-  Next.js automatically generates this file even if you delete it
