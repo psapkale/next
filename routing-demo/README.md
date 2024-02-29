@@ -47,3 +47,5 @@
 -  You can define a layout by default exporting a React component from a `layout.tsx` file
 -  That component should accept a children prop that will be populated with a child page during rendering
 -  Next.js automatically generates this file even if you delete it
+
+## Nested Layouts
