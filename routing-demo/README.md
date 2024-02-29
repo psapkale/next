@@ -21,5 +21,12 @@
 
 ## Custom Not Found page
 
--  To handle 404 pages create a `not-found.[tsx/jsx]` file inside the `src/app`
+-  To handle 404 pages create a `not-found.tsx` file inside the `src/app`
 -  Not found pages can also be defined at the folder level
+
+## File Colocation
+
+-  Next.js uses a file system based router where each route segment map to a corresponding segment in the url path
+-  The route isn't publically accessible until a `page.tsx` file is added to the respected route segment
+-  Moreover even when a route become publically accessible only the content returned by `page.tsx` is sent to the client
+-  The content return must be a default exported React component
