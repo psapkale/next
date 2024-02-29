@@ -68,3 +68,9 @@
    -  Metadata is read in order, from the root level down to the final page level
    -  When there's metadata in multiple places for the same route, they get combined, but page metadata will replace layout metadata if they have the same properties
    -  When multiple segments in a route exports metadata object, the properties are merged to form the final metadata object and during merging, the deepest segment takes priority
+
+## Link Component Navigation
+
+-  To enable client-side navigation Next.js provides us with the `Link` component
+-  The `Link` component is a React component that extends the HTML `a` element, and its the primary way to navigate between routes in Next.js
+-  The `replace` prop replaces the current history state instead of adding a new URL into the stack
