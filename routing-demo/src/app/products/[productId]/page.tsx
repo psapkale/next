@@ -6,6 +6,10 @@ type Props = {
    };
 };
 
+function getRandomInt(count: number) {
+   return Math.floor(Math.random() * count);
+}
+
 // dynamic routing metadata
 export const generateMetadata = async ({
    params,
@@ -25,5 +29,11 @@ export default function ProductDetailsPage({
    params,
 }: // `params` is provided by Next.js
 Props) {
+   const random = getRandomInt(2);
+
+   if (random === 1) {
+      throw new Error('Error loading product');
+   }
+
    return <div>Details of {params.productId}</div>;
 }
