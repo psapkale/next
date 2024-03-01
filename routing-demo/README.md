@@ -92,3 +92,27 @@
 -  `loading.tsx` file allows us to create loading state that are displayed to users while a specific route segment's content is loading
 -  The loading state appears immediately upon navigation, giving users the assurence that the application is responsive and actively loading content
 -  `loading.tsx` will automatically wrap `page.tsx` file and all its nested children within a `React Suspence boundry`
+
+## Error Handling
+
+-  Error Boundary are client component in Next.js
+-  `error.tsx` file automatically wrap a route segment and its nested children in a React Error Boundary
+-  Create error UI tailored to specifin segments using the file-system hierarchy to adjust granularity
+-  Isolate errors to affected segments while keeping the rest of the application functional
+-  Add functionality to attemp to recover from an error without a full page reload
+
+## Component Hierarchy
+
+```
+<Layout>
+   <Template>
+      <ErrorBoundary fallback={<Error />}>
+         <Suspense fallback={<Loading />}>
+            <ErrorBoundary fallback={<NotFound />}>
+               <Page />
+            </ErrorBoundary>
+         </Suspense>
+      </ErrorBoundary>
+   </Template>
+</Layout>
+```
