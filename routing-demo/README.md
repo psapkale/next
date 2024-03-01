@@ -118,3 +118,9 @@
 ```
 
 ## Recovering from Errors
+
+## Handling Errors in Nested Routes
+
+-  Errors bubble up to the closest parent error boundary
+-  An `error.tsx` file will cater to errors for all its nested child segments
+-  By positioning `error.tsx` file at different level in the nested folder of a route, you can acheive a more granular level of error handling
