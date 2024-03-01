@@ -86,3 +86,9 @@
 -  Template also should accept a children prop which will render the nested segments in the route
 -  It is possible to include both `layout.tsx` and `template.tsx` file
 -  In such a scenario, `layout.tsx` renders first and the layouts children is replaced by the component exported by the `template.tsx` file
+
+## Loading UI
+
+-  `loading.tsx` file allows us to create loading state that are displayed to users while a specific route segment's content is loading
+-  The loading state appears immediately upon navigation, giving users the assurence that the application is responsive and actively loading content
+-  `loading.tsx` will automatically wrap `page.tsx` file and all its nested children within a `React Suspence boundry`
