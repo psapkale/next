@@ -116,3 +116,5 @@
    </Template>
 </Layout>
 ```
+
+## Recovering from Errors
