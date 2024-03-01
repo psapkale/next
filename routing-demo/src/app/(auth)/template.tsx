@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 const navLinks = [
    {
@@ -24,9 +25,15 @@ export default function AuthLayout({
    children: React.ReactNode;
 }) {
    const pathname = usePathname();
+   const [input, setInput] = useState('');
 
    return (
       <div>
+         <div>
+            <input value={input} onChange={(e) => setInput(e.target.value)} />
+            {/* Don't change if we navigate from '/register' to '/login' */}
+            {/* To create the new instance on changing the route(i.e. having fresh inputs on changing th route), you can use template files as replacement of layout file */}
+         </div>
          {navLinks.map((link) => {
             const isAcive = pathname.startsWith(link.href);
 

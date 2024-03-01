@@ -76,3 +76,13 @@
 -  The `replace` prop replaces the current history state instead of adding a new URL into the stack
 
 ## Navigating Programmitacally
+
+## Templates
+
+-  Layouts only mount the part representing the content of the newly loaded page but keep all the common elements untouched
+-  Layouts don't remount shared components resulting in better performance
+-  To override this behaviour and create a new instances of shared components everytime a component mounts, we use `template`
+-  When a user navigates between routes that share a `template`, a new instance of the component is mounted, DOM elements are recreated, state is not preserved and effects are re-synchronized
+-  Template also should accept a children prop which will render the nested segments in the route
+-  It is possible to include both `layout.tsx` and `template.tsx` file
+-  In such a scenario, `layout.tsx` renders first and the layouts children is replaced by the component exported by the `template.tsx` file
